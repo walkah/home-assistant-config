@@ -1,0 +1,28 @@
+---
+name: 🏡 Home Assistant CI
+on:
+  push:
+  pull_request:
+jobs:
+  yamllint:
+    name: 🧹 yamllint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v1
+      - name: 🕵️ Run yamllint
+        uses: "docker://pipelinecomponents/yamllint:latest"
+        with:
+          args: yamllint --format github .
+  homme-assistant:
+    name: 🏡 Home Assistant Config Check
+    runs-on: ubuntu-latest
+    needs: [yamllint]
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v1
+      - name: 🕵️ Check configuration
+        uses: "docker://homeassistant/home-assistant:stable"
+        with:
+          args: |
+            python -m homeassistant --script check_config --info all

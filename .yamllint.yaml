@@ -1,0 +1,4 @@
+---
+ignore: |
+  config/automations.yaml
+  config/blueprints/*/homeassistant/*.yaml
