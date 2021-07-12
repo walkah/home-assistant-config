@@ -1,14 +1,11 @@
-
-# Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
-
-http:
-  use_x_forwarded_for: true
-  trusted_proxies: 100.103.57.96
-
-# Text to speech
-tts:
-  - platform: google_translate
+homeassistant:
+  name: nerdhaus
+  latitude: !secret home_latititude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: America/Toronto 
+  packages: !include_dir_named packages
 
 group: !include groups.yaml
 automation: !include automations.yaml
