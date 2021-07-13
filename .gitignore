@@ -5,7 +5,7 @@
 tts
 deps
 image
-secrets.yaml
+/secrets.yaml
 
 *.db
 *.old

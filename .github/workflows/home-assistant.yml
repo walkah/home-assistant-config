@@ -21,8 +21,10 @@ jobs:
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v1
+      - name: ➡️ Copy stub files
+        run: cp -R ./.stubs/* .
       - name: 🕵️ Check configuration
         uses: "docker://homeassistant/home-assistant:stable"
         with:
           args: |
-            python -m homeassistant --script check_config --info all
+            python -m homeassistant --config /github/workspace --script check_config --info all
