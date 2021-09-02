@@ -9,7 +9,7 @@ image
 
 *.db
 *.old
-*.log
+*.log*
 *.conf
 *.db-shm
 *.db-wal
