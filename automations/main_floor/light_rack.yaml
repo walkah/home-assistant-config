@@ -1,0 +1,26 @@
+- id: '1631582483969'
+  alias: Turn on light rack
+  description: ''
+  trigger:
+  - platform: time
+    at: 08:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: bb22c5ed5d647c0713ace2e742f92bd1
+    entity_id: switch.light_rack
+    domain: switch
+  mode: single
+- id: '1631583563463'
+  alias: Turn off light rack
+  description: ''
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: bb22c5ed5d647c0713ace2e742f92bd1
+    entity_id: switch.light_rack
+    domain: switch
+  mode: single
