@@ -10,6 +10,6 @@ homeassistant:
 
 group: !include groups.yaml
 automation: !include automations.yaml
-automation manual: !include_dir_list ./automations
+automation manual: !include_dir_merge_list automations/
 script: !include scripts.yaml
 scene: !include scenes.yaml
