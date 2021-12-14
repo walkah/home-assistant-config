@@ -1,0 +1,27 @@
+
+- id: '1634154676822'
+  alias: Turn on front porch light
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 749027ddc2ff3cc59e22c2557329ec0a
+    entity_id: switch.front_porch
+    domain: switch
+  mode: single
+- id: '1639358610226'
+  alias: Turn off front porch light
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:30:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 749027ddc2ff3cc59e22c2557329ec0a
+    entity_id: switch.front_porch
+    domain: switch
+  mode: single
