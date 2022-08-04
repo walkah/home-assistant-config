@@ -16,3 +16,4 @@ image
 
 .vscode
 .DS_Store
+*.pem
