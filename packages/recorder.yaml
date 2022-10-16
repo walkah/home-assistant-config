@@ -1,2 +1,0 @@
-recorder:
-  db_url: !secret hass_db_url
