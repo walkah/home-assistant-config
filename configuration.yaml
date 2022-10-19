@@ -9,7 +9,6 @@ homeassistant:
   external_url: "https://hass.nerdhaus.ca"
   packages: !include_dir_named packages
 
-group: !include groups.yaml
 automation: !include automations.yaml
 automation manual: !include_dir_merge_list automations/
 script: !include scripts.yaml
