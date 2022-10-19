@@ -1,0 +1,14 @@
+homekit:
+  filter:
+    include_domains:
+      - camera
+    include_entities:
+      - climate.nest
+      - cover.garage_door
+      - sensor.awair_humidity
+      - sensor.awair_temperature
+      - sensor.home_office_humidity
+      - sensor.home_office_temperature
+      - sensor.nest_humidity
+      - sensor.nest_temperature
+      - switch.front_porch
