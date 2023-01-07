@@ -1,11 +1,12 @@
-# Example configuration.yaml entry
+# Get notifications when new updates are available
 - alias: "Update Available Notification"
+  id: "ae8b75ea-0914-4816-a772-4d0224b262fa"
   trigger:
     - platform: state
-      entity_id: binary_sensor.home_assistant_website_update_available
-      from: "off"
+      entity_id: update.home_assistant_core_update
       to: "on"
   action:
     - service: notify.notify
       data:
-        message: "Home Assistant {{ states('sensor.home_assistant_website') }} is available."
+        title: "New update available"
+        message: "Home Assistant Core update is available."
