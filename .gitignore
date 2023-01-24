@@ -17,3 +17,5 @@ image
 .vscode
 .DS_Store
 *.pem
+
+/custom_components/hacs
