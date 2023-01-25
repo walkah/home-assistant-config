@@ -1,0 +1,11 @@
+matrix:
+  homeserver: https://matrix.walkah.chat
+  username: "@hass:walkah.chat"
+  password: !secret matrix_password
+  rooms:
+    - "#nerdhaus:walkah.chat"
+
+notify:
+  - name: matrix
+    platform: matrix
+    default_room: "#nerdhaus:walkah.chat"
