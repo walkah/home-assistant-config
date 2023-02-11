@@ -19,3 +19,4 @@ image
 *.pem
 
 /custom_components/hacs
+/custom_components/dyson_local

@@ -1,6 +1,7 @@
-- id: "1676005859456"
-  alias: Bedroom TV Time
-  description: ""
+- alias: Bedroom TV Time
+  description: "Put the purifier in night mode when the TV starts playing"
+  id: "331f421c-c0b6-41cf-98ce-2ab0126a335a"
+  mode: single
   trigger:
     - platform: state
       entity_id:
@@ -12,11 +13,11 @@
       data: {}
       target:
         entity_id: switch.purifier_humidify_cool_formaldehyde_night_mode
-  mode: single
 
-- id: "1676006403295"
-  alias: Bedroom TV Time Over
+- alias: Bedroom TV Time Over
   description: ""
+  id: "826af719-2a40-431f-8f02-4fa935369c3e"
+  mode: single
   trigger:
     - platform: state
       entity_id:
@@ -28,4 +29,3 @@
       data: {}
       target:
         entity_id: switch.purifier_humidify_cool_formaldehyde_night_mode
-  mode: single

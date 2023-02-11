@@ -1,28 +1,29 @@
-- id: '1625281735631'
-  alias: Keep office cool
-  description: ''
+- alias: Keep office cool
+  description: ""
+  id: "7b7450b6-0811-4c44-9581-0461adcf912e"
+  mode: single
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.home_office_temperature
-    above: '24'
+    - platform: numeric_state
+      entity_id: sensor.home_office_temperature
+      above: "24"
   condition: []
   action:
-  - type: turn_on
-    device_id: 0739a7e7036ad9758825b93a524e1f00
-    entity_id: switch.air_conditioner
-    domain: switch
+    - service: switch.turn_on
+      data: {}
+      target:
+        entity_id: switch.air_conditioner
+
+- alias: Turn off office AC
+  description: ""
+  id: "380dc2cc-c43b-4c69-bc36-6923b956f8be"
   mode: single
-- id: '1625503795025'
-  alias: Turn off office AC
-  description: ''
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.home_office_temperature
-    below: '22'
+    - platform: numeric_state
+      entity_id: sensor.home_office_temperature
+      below: "22"
   condition: []
   action:
-  - type: turn_off
-    device_id: 0739a7e7036ad9758825b93a524e1f00
-    entity_id: switch.air_conditioner
-    domain: switch
-  mode: single
+    - service: switch.turn_off
+      data: {}
+      target:
+        entity_id: switch.air_conditioner
