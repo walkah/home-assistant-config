@@ -1,0 +1,31 @@
+- id: "1676005859456"
+  alias: Bedroom TV Time
+  description: ""
+  trigger:
+    - platform: state
+      entity_id:
+        - media_player.bedroom_2
+      to: playing
+  condition: []
+  action:
+    - service: switch.turn_on
+      data: {}
+      target:
+        entity_id: switch.purifier_humidify_cool_formaldehyde_night_mode
+  mode: single
+
+- id: "1676006403295"
+  alias: Bedroom TV Time Over
+  description: ""
+  trigger:
+    - platform: state
+      entity_id:
+        - media_player.bedroom_2
+      to: standby
+  condition: []
+  action:
+    - service: switch.turn_off
+      data: {}
+      target:
+        entity_id: switch.purifier_humidify_cool_formaldehyde_night_mode
+  mode: single
