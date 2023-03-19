@@ -1,4 +1,5 @@
 ---
+# Base configuration.
 homeassistant:
   name: nerdhaus
   latitude: !secret home_latititude
@@ -12,5 +13,5 @@ homeassistant:
 
 automation: !include automations.yaml
 automation manual: !include_dir_merge_list automations/
-script: !include scripts.yaml
+script: !include_dir_merge_named scripts
 scene: !include scenes.yaml

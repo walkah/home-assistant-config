@@ -1,0 +1,24 @@
+bedtime:
+  alias: Bedtime
+  sequence:
+    - service: media_player.turn_off
+      data: {}
+      target:
+        entity_id:
+          - media_player.main_floor
+          - media_player.lg_tv
+    - service: light.turn_off
+      data: {}
+      target:
+        entity_id: light.main_floor_tv_area
+    - service: light.turn_on
+      data: {}
+      target:
+        entity_id:
+          - light.hallway_main_lights
+    - service: scene.turn_on
+      data: {}
+      target:
+        entity_id: scene.bedroom_relax
+  mode: single
+  icon: mdi:bed
