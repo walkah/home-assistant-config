@@ -4,8 +4,8 @@
   mode: single
   trigger:
     - platform: numeric_state
-      entity_id: sensor.home_office_temperature
-      above: "24"
+      entity_id: sensor.awair_temperature
+      above: "26"
   condition: []
   action:
     - service: switch.turn_on
@@ -19,8 +19,8 @@
   mode: single
   trigger:
     - platform: numeric_state
-      entity_id: sensor.home_office_temperature
-      below: "22"
+      entity_id: sensor.awair_temperature
+      below: "23"
   condition: []
   action:
     - service: switch.turn_off
