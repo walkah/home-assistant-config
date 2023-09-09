@@ -4,7 +4,6 @@ homekit:
       - camera
     include_entities:
       - climate.nest
-      - cover.garage_door
       - cover.office_blinds
       - sensor.awair_humidity
       - sensor.awair_temperature
