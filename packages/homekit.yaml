@@ -12,3 +12,7 @@ homekit:
       - sensor.nest_humidity
       - sensor.nest_temperature
       - switch.front_porch
+      - switch.air_conditioner
+      - switch.light_rack
+      - switch.space_heater
+      - switch.string_lights
