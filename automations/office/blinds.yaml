@@ -1,0 +1,15 @@
+- id: '1710275740260'
+  alias: Close office blinds
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  condition: []
+  action:
+  - service: cover.close_cover
+    metadata: {}
+    data: {}
+    target:
+      area_id: office
+  mode: single
