@@ -9,7 +9,7 @@ showtime:
           - media_player.main_floor
     - service: light.turn_on
       data:
-        brightness_pct: 5
+        brightness_pct: 20
       target:
         entity_id: light.main_floor_tv_area
   mode: single
