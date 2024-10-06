@@ -5,7 +5,7 @@
   trigger:
     - platform: state
       entity_id:
-        - media_player.bedroom_2
+        - media_player.bedroom_tv
       to: playing
   condition: []
   action:
@@ -21,7 +21,7 @@
   trigger:
     - platform: state
       entity_id:
-        - media_player.bedroom_2
+        - media_player.bedroom_tv
       to: standby
   condition: []
   action:
