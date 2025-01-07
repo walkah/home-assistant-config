@@ -12,7 +12,7 @@
     - service: switch.turn_on
       data: {}
       target:
-        entity_id: switch.purifier_humidify_cool_formaldehyde_night_mode
+        entity_id: switch.purifier_night_mode
 
 - alias: Bedroom TV Time Over
   description: ""
@@ -28,4 +28,4 @@
     - service: switch.turn_off
       data: {}
       target:
-        entity_id: switch.purifier_humidify_cool_formaldehyde_night_mode
+        entity_id: switch.purifier_night_mode
