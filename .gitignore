@@ -20,3 +20,5 @@ image
 
 /custom_components/hacs
 /custom_components/dyson_local
+/custom_components/spook
+/custom_components/spook_inverse
