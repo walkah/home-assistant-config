@@ -1,5 +1,7 @@
 bedtime:
   alias: Bedtime
+  mode: single
+  icon: mdi:bed
   sequence:
     - service: media_player.turn_off
       data: {}
@@ -20,5 +22,7 @@ bedtime:
       data: {}
       target:
         entity_id: scene.bedroom_relax
-  mode: single
-  icon: mdi:bed
+    - service: switch.turn_on
+      data: {}
+      target:
+        entity_id: switch.purifier_night_mode

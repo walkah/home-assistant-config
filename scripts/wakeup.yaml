@@ -1,0 +1,9 @@
+wakeup:
+  alias: Wake up
+  mode: single
+  icon: mdi:weather-sunset-up
+  sequence:
+    - service: switch.turn_off
+      data: {}
+      target:
+        entity_id: switch.purifier_night_mode

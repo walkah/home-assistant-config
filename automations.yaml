@@ -1,1 +1,14 @@
-[]
+- id: '1724553196564'
+  alias: Goodnight Action
+  description: ''
+  trigger:
+  - platform: event
+    event_data:
+      actionID: B4B3EB14-2508-40F7-883A-204C100B1F2A
+    event_type: ios.action_fired
+  condition: []
+  action:
+  - action: script.goodnight
+    metadata: {}
+    data: {}
+  mode: single

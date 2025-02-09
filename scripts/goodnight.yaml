@@ -1,5 +1,7 @@
 goodnight:
   alias: Goodnight
+  mode: single
+  icon: mdi:sleep
   sequence:
     - service: light.turn_off
       data: {}
@@ -9,5 +11,3 @@ goodnight:
           - bedroom
           - closet
           - hallway
-  mode: single
-  icon: mdi:sleep
