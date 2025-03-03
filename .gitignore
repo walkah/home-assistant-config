@@ -19,6 +19,8 @@ image
 *.pem
 
 /custom_components/hacs
+
+/custom_components/battery_notes
 /custom_components/dyson_local
 /custom_components/spook
 /custom_components/spook_inverse
