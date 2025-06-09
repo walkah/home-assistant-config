@@ -1,7 +1,7 @@
 cover:
   - platform: group
-    unique_id: "office_blinds"
-    name: "Office Blinds"
+    unique_id: "lab_blinds"
+    name: "Lab Blinds"
     entities:
-      - cover.office_blinds_left_cover
-      - cover.office_blinds_right_cover
+      - cover.lab_blinds_left_cover
+      - cover.lab_blinds_right_cover

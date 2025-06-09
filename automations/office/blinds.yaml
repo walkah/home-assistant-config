@@ -1,15 +1,15 @@
-- id: '1710275740260'
-  alias: Close office blinds
-  description: ''
+- id: "1710275740260"
+  alias: Close lab blinds
+  description: ""
   trigger:
-  - platform: sun
-    event: sunset
-    offset: 0
+    - platform: sun
+      event: sunset
+      offset: 0
   condition: []
   action:
-  - service: cover.close_cover
-    metadata: {}
-    data: {}
-    target:
-      area_id: office
+    - service: cover.close_cover
+      metadata: {}
+      data: {}
+      target:
+        area_id: lab
   mode: single
