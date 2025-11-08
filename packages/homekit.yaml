@@ -3,14 +3,11 @@ homekit:
     include_domains:
       - camera
     include_entities:
-      - climate.nest
       - cover.office_blinds
       - sensor.awair_humidity
       - sensor.awair_temperature
       - sensor.home_office_humidity
       - sensor.home_office_temperature
-      - sensor.nest_humidity
-      - sensor.nest_temperature
       - switch.front_porch
       - switch.air_conditioner
       - switch.light_rack
