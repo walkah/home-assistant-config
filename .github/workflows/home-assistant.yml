@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v5
       - name: 🕵️ Run yamllint
         uses: "docker://pipelinecomponents/yamllint:latest"
         with:
@@ -20,11 +20,10 @@ jobs:
     needs: [yamllint]
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v1
-      - name: ➡️ Copy stub files
-        run: cp -R ./.stubs/* .
+        uses: actions/checkout@v5
       - name: 🕵️ Check configuration
-        uses: "docker://homeassistant/home-assistant:stable"
+        uses: frenck/action-home-assistant@v1.4
         with:
-          args: |
-            python -m homeassistant --config /github/workspace --script check_config --info all
+          path: "."
+          secrets: ./.stubs/secrets.yaml
+          version: "stable"
